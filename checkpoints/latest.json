@@ -1,0 +1,10 @@
+{
+  "checkpoint_id": 6,
+  "created_at": "2026-06-15T13:41:28.051328+00:00",
+  "key_fingerprint": "8888b9fb0e8f5089be2d027364f96bcaeb1204f814ea174283124932d2faf1bf",
+  "payload_hash": "7506a5f6151520733bfd861060e0a3ed83b3e3f1b574c41609bcafe57182f546",
+  "previous_checkpoint_hash": "29ad18bde24474cd6718e574458e0b12f9de0697a6bda2344776b344be5fc652",
+  "signature": "oNbatjAYZ3MmcbJwVcTWY8mTXy4vYzi2qi+mHIJOlqIvKcxNLtd+uovfUqu77ISJ0KIuu1Fy4sVj17keZwnfOScb7TX2fO7BNr2UZvDsD4wQkp5Ot4FDoK5J9DFGKmTmi1mZFE8v6t4eC5YoO3QiX00mD78zB9+CyhBuY4LMPlaxDXNy2OXDqnqB0VBx1TJQ7ah78gWgEnMqcgje+0YQJ5u8t0QO74HgCF7dqad3qNw0oC4U8BdmqBKrJizjw1ywjoYA3o+1L6n2YpKuXQwIUEF+JRkvV/7YOi00GTwHJMwMnurHJKEABsMcmN+WsKP20HqBRni5GnnlIqet123qCNwPZn70FcZLS65H5fi3Aj5rViEQehyf6wrCwV7NOxItYlrWnOcJJ9lWIACk4Dudyojo3qM7x1U1uXOl/iqIyyUic5MGYpyS9lD5gnsBczhOEkZgDalaH/SkcD7Px/cLTAVynKm8V6AuZlkJqyIvzqHoDfRovwiiqFJsmkHFb+mYebx9SBfh1rQN/EF6bq4g0be0IbtfkHp6xUMiYkXRXq0y4e1coyM6RcTTCNHqhCXYK+DPKHDbAiKRrAWFHyWu6wnf7RyIc2QI3KIi4UoPBWhMadJdPaeN9+9H/vM0cHjDaRKzUfa92m4EgJcBT25q1K/EOPhFcmZL2iTzLtkLBPk=",
+  "tenant_count": 43,
+  "total_entries": 170460
+}

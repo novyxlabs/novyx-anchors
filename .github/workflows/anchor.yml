@@ -1,0 +1,46 @@
+name: Anchor audit checkpoint
+
+# Archives Novyx Core's public audit checkpoint into this repo's git history.
+# Every captured checkpoint becomes an immutable, timestamped commit — an
+# external, tamper-evident anchor independent of Novyx's own infrastructure.
+
+on:
+  schedule:
+    - cron: "17 */6 * * *" # every 6 hours (offset to avoid the top-of-hour rush)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: anchor
+  cancel-in-progress: false
+
+jobs:
+  anchor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Fetch current checkpoint
+        id: fetch
+        run: python3 scripts/fetch_checkpoint.py
+
+      - name: Verify signatures and chain
+        if: steps.fetch.outputs.changed == 'true'
+        run: |
+          python3 -m pip install --quiet cryptography
+          python3 scripts/verify.py
+
+      - name: Commit new checkpoint
+        if: steps.fetch.outputs.changed == 'true'
+        run: |
+          git config user.name "novyx-anchor-bot"
+          git config user.email "anchor@novyxlabs.com"
+          git add checkpoints/
+          git commit -m "anchor: checkpoint #${{ steps.fetch.outputs.checkpoint_id }}"
+          git push
